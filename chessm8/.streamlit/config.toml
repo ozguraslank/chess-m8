@@ -1,0 +1,9 @@
+[browser]
+gatherUsageStats = false
+
+[client]
+showSidebarNavigation = false
+showErrorDetails = false
+
+[theme]
+base="light"
