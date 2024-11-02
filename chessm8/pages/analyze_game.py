@@ -1,7 +1,11 @@
 import streamlit as st
 from pages.sidebar import get_menu_side_bar
 from scripts.web_helpers import *
+from scripts.game_analyzer import * 
 from api.lichess_api import *
+import chess
+import chess.svg
+from streamlit.components.v1 import html
 
 change_layout("Match Analysis", "wide")
 get_menu_side_bar()
@@ -91,15 +95,25 @@ with col1:
                 st.stop()
 
         else:
-            try:
+            st.session_state['game_id'] = game_id
+            with st.spinner("Fetching game data..."):
                 game_data = get_game_data(game_id)
                 if not game_data:
                     st.warning("Please enter a valid game ID")
                     st.stop()
 
-            except Exception:
-                st.warning("Please enter a valid game ID")
-                st.stop()
+            with st.spinner("Analyzing game..."):
+                game_analysis_json = analyze_game(game_data)
+                ai_suggestions_list = []
+                ai_suggestions_list.append("Game started")
+
+                for move in game_analysis_json['moves']:
+                    ai_suggestions_list.append(move['white_analysis'])
+                    ai_suggestions_list.append(move['black_analysis'])
+
+                st.session_state[f'{game_id}_game_data'] = game_data
+                st.session_state[f'{game_id}_current_move'] = 0
+                st.session_state[f'{game_id}_suggestions'] = ai_suggestions_list
 
 if user_games:
     st.markdown(f"### Last {len(user_games)} Games for {username}")
@@ -148,7 +162,27 @@ if user_games:
                 st.write(f"<div class='column-value'>{current_game_accuracy}%</div>", unsafe_allow_html=True)
 
             with col6:
-                st.button("Analyze", key=f"{game['id']}_button")
+                if st.button("Analyze", key=f"{game['id']}_button"):
+                    game_id = game['id']
+                    st.session_state['game_id'] = game_id
+                    
+                    with st.spinner("Analyzing game..."):
+                        game_analysis_json = analyze_game(game_data)
+                        ai_suggestions_list = []
+                        ai_suggestions_list.append("Game started")
 
-elif game_data:
-    st.write("*In progress*")
+                        for move in game_analysis_json['moves']:
+                            ai_suggestions_list.append(move['white_analysis'])
+                            ai_suggestions_list.append(move['black_analysis'])
+
+                        st.session_state[f'{game_id}_game_data'] = game_data
+                        st.session_state[f'{game_id}_current_move'] = 0
+                        st.session_state[f'{game_id}_suggestions'] = ai_suggestions_list
+
+selected_game_id = st.session_state.get('game_id', None)
+if selected_game_id:
+    game_data = st.session_state.get(f'{selected_game_id}_game_data', None)
+    current_move = st.session_state.get(f'{selected_game_id}_current_move', None)
+    suggestions = st.session_state.get(f'{selected_game_id}_suggestions', None)
+
+    display_chess_game(selected_game_id, game_data['moves'], suggestions, current_move)
