@@ -12,9 +12,9 @@ Getting started with **Chess-M8** is simple! You can access the application dire
 
 - **Game Analysis**: Once you're in the app, you can enter your Lichess username or a specific game ID for analysis. Navigate through your game’s moves on an interactive chessboard. As you explore each move, **Chess-M8** provides insightful commentary that explains why certain moves are strong or weak. This feature allows you to understand your decision-making process rather than merely memorizing moves, fostering a deeper understanding of chess strategy. With feedback on mistakes and suggestions for improvement, you'll gain valuable insights that will accelerate your learning curve and enhance your gameplay.
 
-  <img src="https://raw.githubusercontent.com/ozguraslank/chess-m8/testing/img/game_analysis_part1.gif" alt="Game Analysis Part 1" width="700"/>
-  <img src="https://raw.githubusercontent.com/ozguraslank/chess-m8/testing/img/game_analysis_part2.gif" alt="Game Analysis Part 2" width="700"/>
+![Game Analysis Part 1](img/game_analysis_part1.gif)
+![Game Analysis Part 2](img/game_analysis_part2.gif)
 
 - **Opening Learning**: In addition to game analysis, **Chess-M8** is a fantastic resource for learning chess openings. Choose from a curated list of openings tailored to your skill level and playing style. The app will guide you through each opening, explaining the importance of each move and the strategic ideas behind them. You can also input a specific opening name for customized guidance. By engaging with the app, you’ll not only expand your repertoire of openings but also develop a more profound understanding of the game, allowing you to play with confidence and purpose.
 
-  <img src="https://raw.githubusercontent.com/ozguraslank/chess-m8/testing/img/tutorial.gif" alt="Game Analysis Part 2" width="700"/>
+![Game Analysis Part 2](img/tutorial.gif)
