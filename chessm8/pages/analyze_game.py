@@ -63,7 +63,7 @@ st.divider()
 
 col1, _ = st.columns(2)
 with col1:
-    st.info("Enter your Lilchess username or game ID to start analyzing your games")
+    st.info("Enter your Lichess username or game ID to start analyzing your games")
 
 col1, _, _, _ = st.columns(4)
 with col1:
