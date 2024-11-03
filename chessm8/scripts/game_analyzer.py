@@ -77,4 +77,4 @@ def analyze_game(game_data: str):
         temperature=0.1
         ))
 
-    return eval(response.text)
+    return json.loads(response.text)
