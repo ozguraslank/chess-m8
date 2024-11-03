@@ -49,7 +49,10 @@ st.divider()
 
 col1, _ = st.columns(2)
 with col1:
-    st.info("Enter your Lichess username or game ID to start analyzing your games")
+    st.info("""
+            Enter your Lichess username or game ID to start analyzing your games \n
+            **For better user experience, please use the app in 90% zoom**
+            """)
 
 col1, _, _, _ = st.columns(4)
 with col1:
@@ -167,9 +170,6 @@ if selected_game_id:
                     game_analysis_json = analyze_game(game_data)
 
                 if not game_analysis_json:
-                    print("Game analysis failed again, here is the game analysis json in the second attempt:")
-                    print(game_analysis_json)
-                    st.error(f"Game analysis failed for this game, please try another game")
                     st.stop()
 
                 ai_suggestions_list.append("Game starts") # Add a dummy move for the game start
