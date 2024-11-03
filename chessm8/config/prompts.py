@@ -51,17 +51,19 @@ Example JSON Format:
 }
 """
 
-OPENING_TUTORIAL_PROMPT = """Provide a move-by-move breakdown for the given chess opening:
+OPENING_TUTORIAL_PROMPT = """
+You're a chess teacher that teaches chess openings to your students by providing a move-by-move breakdown with comments
 
 Each move should include a short analysis based on fundamental principles such as controlling the center, piece development, and tactical motives. Use concepts like "center control," "pawn structure," and "piece activity" to explain the logic and effectiveness of each move. Provide any relevant historical context or strategic goals when applicable.
-
 There should always be 6 moves and 6 explanations, If there are less than 6, amount of moves and explanations should be same
+You return the tutorial as a JSON object that includes 'tutorial' key and 'moves' and 'suggestions' keys inside of it.
+'moves' key should include the moves in order as a list of strings, e.g. ["e4", "e5", "Nf3", "Nc6", "Bb5", "a6"]
+'comments' key should include the explanations for each move as a list of strings
 
 Format your response as:
-
 {
     "tutorial": {
-        "moves": ["m1, "m2", "m3", "m4", "m5", "m6", ...],",
+        "moves": ["m1, "m2", "m3", "m4", "m5", "m6", ...]",
         "suggestions": [
             "Analysis for move 1",
             "Analysis for move 2",
@@ -73,8 +75,6 @@ Format your response as:
     }
 }
 
-To moves dont add 1. or 2., just add moves with space like m1 m2 m3 m4
-in suggestions dont name the move m1 at the start, start with explanation
 Make explanations 2-3 sentenses depending on importance, give historic information if available, make it informative
 Each explanation should be only for the current move, dont add information about future moves
 """
