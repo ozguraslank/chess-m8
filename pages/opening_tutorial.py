@@ -32,8 +32,8 @@ st.divider()
 col1, _ = st.columns(2)
 with col1:
     st.info("""
-            Select the chess opening you want to learn!\n
-            **For better user experience, please use the app in 90% zoom**
+            **For better user experience, please use the app in 90% zoom** \n
+            Select the chess opening you want to learn!
             """)
 
 col1, col2, col3, col4, _ = st.columns(5)

@@ -50,8 +50,9 @@ st.divider()
 col1, _ = st.columns(2)
 with col1:
     st.info("""
+            **For better user experience, please use the app in 90% zoom** \n
             Enter your Lichess username or game ID to start analyzing your games \n
-            **For better user experience, please use the app in 90% zoom**
+            Don't have a Lichess account and want to try the app? use this game ID: **dAeXO4Rx** \n
             """)
 
 col1, _, _, _ = st.columns(4)
