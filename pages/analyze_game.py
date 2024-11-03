@@ -194,5 +194,4 @@ if selected_game_id:
             display_chess_game(selected_game_id, game_data['moves'], ai_suggestions_list, current_move, evals)
             
     except Exception as e:
-        st.error(f"Game analysis is failed for this game, please try another game")
         st.stop()
