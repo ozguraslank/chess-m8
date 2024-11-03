@@ -9,3 +9,4 @@ def get_menu_side_bar():
         st.divider()
         st.subheader("Menu")
         st.page_link("pages/analyze_game.py", label="Analyze Game")
+        st.page_link("pages/opening_tutorial.py", label="Opening Tutorial")
