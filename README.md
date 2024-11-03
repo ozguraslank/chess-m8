@@ -6,7 +6,7 @@ Whether you’re a beginner looking to learn or an experienced player seeking to
 
 ## Installation
 
-Getting started with **Chess-M8** is simple! You can access the application directly at: [chessm8.streamlit.app](https://chess-m8.streamlit.app). There’s no need for complicated installation processes—just click the link and dive into the world of chess analysis!
+Getting started with **Chess-M8** is simple! You can access the application directly at: [chess-m8.streamlit.app](https://chess-m8.streamlit.app). There’s no need for complicated installation processes—just click the link and dive into the world of chess analysis!
 
 ## Usage
 
