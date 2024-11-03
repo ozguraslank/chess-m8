@@ -1,67 +1,67 @@
 CHESS_OPENINGS = {
-    'levels': ['beginner', 'intermediate', 'advanced'],
-    'strategies': ['aggressive', 'positional'],
+    'levels': ['Beginner', 'Intermediate', 'Advanced'],
+    'strategies': ['Aggressive', 'Positional'],
 
     'openings': {
         'italian_game': {
             'name': 'Italian Game',
-            'level': 'beginner',
-            'approach': 'positional',
+            'level': 'Beginner',
+            'approach': 'Positional',
         },
         'london_system': {
             'name': 'London System',
-            'level': 'beginner',
-            'approach': 'positional',
+            'level': 'Beginner',
+            'approach': 'Positional',
         },
         'royal_lopez': {
             'name': 'Ruy López',
-            'level': 'intermediate',
-            'approach': 'positional',
+            'level': 'Intermediate',
+            'approach': 'Positional',
         },
         'french_defense': {
             'name': 'French Defense',
-            'level': 'intermediate',
-            'approach': 'positional',
+            'level': 'Intermediate',
+            'approach': 'Positional',
         },
         'queen_gambit': {
             'name': 'Queen’s Gambit',
-            'level': 'advanced',
-            'approach': 'positional',
+            'level': 'Advanced',
+            'approach': 'Positional',
         },
         'nimzo_indian_defense': {
             'name': 'Nimzo-Indian Defense',
-            'level': 'advanced',
-            'approach': 'positional',
+            'level': 'Advanced',
+            'approach': 'Positional',
         },
         'kings_gambit': {
             'name': 'King’s Gambit',
-            'level': 'beginner',
-            'approach': 'aggressive',
+            'level': 'Beginner',
+            'approach': 'Aggressive',
         },
         'sicilian_defense': {
             'name': 'Sicilian Defense',
-            'level': 'beginner',
-            'approach': 'aggressive',
+            'level': 'Beginner',
+            'approach': 'Aggressive',
         },
         'sicilian_najdorf': {
             'name': 'Sicilian Najdorf',
-            'level': 'intermediate',
-            'approach': 'aggressive',
+            'level': 'Intermediate',
+            'approach': 'Aggressive',
         },
         'evans_gambit': {
             'name': 'Evans Gambit',
-            'level': 'intermediate',
-            'approach': 'aggressive',
+            'level': 'Intermediate',
+            'approach': 'Aggressive',
         },
         'dragon_variation': {
             'name': 'Sicilian Dragon',
-            'level': 'advanced',
-            'approach': 'aggressive',
+            'level': 'Advanced',
+            'approach': 'Aggressive',
         },
         'king_indian_attack': {
             'name': 'King’s Indian Attack',
-            'level': 'advanced',
-            'approach': 'aggressive',
+            'level': 'Advanced',
+            'approach': 'Aggressive',
         },
     }
 }
